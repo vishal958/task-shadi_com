@@ -1,0 +1,26 @@
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.item {
+    width: 25%;
+    text-align: center;
+    margin: 1rem;
+    background: beige;
+    padding: 1rem;
+}
+
+img {
+    width: 50%;
+}
+@media only screen and (max-width: 768px) {
+    .item {
+        width: 100%;
+    }
+}
+
