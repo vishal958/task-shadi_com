@@ -1,10 +1,7 @@
-
-
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
 }
 
 .item {
@@ -18,9 +15,19 @@
 img {
     width: 50%;
 }
+
+.nav-bar a {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.home {
+    text-align: center;
+    font-size: 4rem;
+}
+
 @media only screen and (max-width: 768px) {
     .item {
         width: 100%;
     }
 }
-

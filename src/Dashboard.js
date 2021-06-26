@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-
+import {  Redirect, } from 'react-router-dom'
+import Login from "./Login";
 
 const BASE_URL = "https://api.instantwebtools.net";
 const APP_ID = "60d6a7206e9a79cabbee8587";
 const PAGE_NUM = 1;
 
 
-const Dashboard = () => {
+const Dashboard = ({auth,history}) => {
     const [loading, setLoading] = useState(false);
     const [state, setState] = useState([]);
     const [page, setPage] = useState(PAGE_NUM);
@@ -33,6 +34,7 @@ const Dashboard = () => {
         }
     };
     return (
+        auth ?
         <div className="App">
             <div className="container">
                 {loading && 'Loading...'}
@@ -46,7 +48,7 @@ const Dashboard = () => {
                     </div>
                 )
                 }</div>
-        </div>
+        </div>:<Redirect to={'/login'} />
     );
 }
 
