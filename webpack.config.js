@@ -20,10 +20,15 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
+    },
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'public/index.html'
         }),
         // new webpack.DefinePlugin({
         //     "process.env": {
